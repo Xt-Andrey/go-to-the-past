@@ -1,3 +1,262 @@
-h1 {
-    color: blue;
+/* Paleta personalizada */
+:root {
+    --coffee-primary: #4A2C2A;
+    --coffee-secondary: #C89B3C;
+    --cream: #F5E5C0;
+    --gold: #FFD700;
+    --text-dark: #2D1B17;
+    --success: #198754;
+    --danger: #ffffff;
+}
+/* Colores del título y destacado */
+header.jumbotron h1 {
+    color: var(--coffee-primary);
+}
+.aurora-highlight {
+    color: var(--coffee-secondary);
+}
+body { border: 10px solid rgb(250, 219, 219) !important; }
+/* Color del texto del párrafo */
+header.jumbotron p.lead {
+    color: #6c4f3d;
+    font-size: 1.5rem;
+}
+
+/* Botón personalizado para el header */
+.btn-aurora {
+    background: var(--gold);
+    color: var(--coffee-primary);
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.8rem 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-aurora:hover {
+    background: var(--coffee-secondary);
+    color: var(--cream);
+    transform: scale(1.05);
+}
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, var(--cream) 60%, #fff 100%);
+    color: var(--text-dark);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--coffee-primary) !important;
+    box-shadow: 0 2px 12px rgba(74,44,42,0.08);
+}
+.navbar .navbar-brand {
+    color: var(--cream) !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+}
+.navbar .nav-link {
+    color: var(--cream) !important;
+    font-weight: 500;
+    margin-right: 1rem;
+    transition: color 0.2s;
+}
+.navbar .nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* Header */
+header.jumbotron {
+    background: linear-gradient(120deg, var(--coffee-primary) 60%, var(--coffee-secondary) 100%);
+    color: var(--cream);
+    padding: 4rem 0 3rem 0;
+    margin-bottom: 2rem;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 8px 32px rgba(74,44,42,0.12);
+}
+header .btn-primary {
+    background: var(--gold);
+    color: var(--coffee-primary);
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(200,155,60,0.15);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+header .btn-primary:hover {
+    background: var(--coffee-secondary);
+    color: var(--cream);
+    transform: scale(1.05);
+}
+
+/* Tarjetas de productos */
+.product-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(74,44,42,0.08);
+    border-radius: 18px;
+    border: none;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 2rem;
+}
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(74,44,42,0.18);
+    border: 2px solid var(--coffee-secondary);
+}
+
+/* Imágenes de productos */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+    border-bottom: 2px solid var(--cream);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    background: linear-gradient(120deg, #fff 80%, var(--cream) 100%);
+    border-radius: 0 0 18px 18px;
+    padding-bottom: 1.5rem;
+}
+
+/* Títulos y textos */
+.card-title {
+    color: var(--coffee-primary);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    color: #6c4f3d;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+.price {
+    color: var(--coffee-secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Botón agregar al carrito */
+.add-to-cart {
+    background: var(--success);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 24px;
+    border: none;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(25,135,84,0.10);
+}
+.add-to-cart:hover {
+    background: var(--coffee-primary);
+    color: var(--gold);
+    transform: scale(1.07);
+}
+
+/* Panel del carrito */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    z-index: 1050;
+    display: none;
+    overflow-y: auto;
+    border-radius: 0 0 0 18px;
+    padding: 2rem 1.5rem 3.5rem 1.5rem;
+    border-left: 4px solid var(--coffee-secondary);
+}
+.cart-panel h2 {
+    color: var(--coffee-primary);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+#cart-items li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+#cart-items img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#cart-total {
+    color: var(--coffee-secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#close-cart {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 24px;
+    transition: background 0.2s;
+}
+#close-cart:hover {
+    background: var(--coffee-primary);
+    color: var(--gold);
+}
+
+/* Badge del contador del carrito */
+#cart-count {
+    font-size: 0.9rem;
+    background: var(--danger);
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 7px;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
+
+/* Toast de producto añadido */
+.position-fixed.top-0.end-0 {
+    animation-duration: 0.8s;
+    background: var(--success) !important;
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(25,135,84,0.15);
+}
+
+/* Footer */
+footer {
+    background: var(--coffee-primary) !important;
+    color: var(--cream) !important;
+    border-radius: 32px 32px 0 0;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 12px rgba(74,44,42,0.08);
+}
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive para el carrito en móvil */
+@media (max-width: 500px) {
+    .cart-panel {
+        width: 100vw;
+        border-radius: 0;
+        padding: 1rem 0.5rem 2.5rem 0.5rem;
+    }
 }
