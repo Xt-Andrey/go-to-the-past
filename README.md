@@ -23,4 +23,7 @@ Facilitar la administración de una cafetería, mejorando la experiencia tanto p
 ## Autor
 Desarrollador apasionado por la tecnología y la innovación, con interés en crear proyectos prácticos que aporten soluciones reales. Siempre buscando aprender y mejorar, comprometido con la calidad y el crecimiento profesional.
 
-## 💻-[@Xt-Andrey](https://instagram.com/xt_atdery)
+##  💻-[@Xt-Andrey](https://instagram.com/xt_atdery)
+[RUBIEL ANDREY GALVIS GALVIS] [192483]
+## Enlace de diseño
+(https://www.figma.com/design/CNvj4BBchmtkeGh2yCUntR/cafe-aurora?node-id=0-1&t=1GdjpBngi97PO68l-1)

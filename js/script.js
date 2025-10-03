@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = this.getAttribute('data-name');
             const price = parseFloat(this.getAttribute('data-price'));
             const img = this.closest('.card').querySelector('img').src;
-            // Buscar si ya está en el carrito
             const found = cart.find(item => item.name === name);
             if (found) {
                 found.qty += 1;
@@ -42,11 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Actualizar el carrito visualmente
     function updateCart() {
-        // Actualizar contador
+
         const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
         cartCount.textContent = totalItems;
 
-        // Listar productos
         cartItems.innerHTML = '';
         let total = 0;
         cart.forEach(item => {
@@ -78,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Toast visual para producto añadido
+    // Mostrar notificación de añadido
     function showAddedToast(productName) {
         let toast = document.createElement('div');
         toast.className = "position-fixed top-0 end-0 m-4 p-3 bg-success text-white rounded shadow animate__animated animate__fadeInDown";
